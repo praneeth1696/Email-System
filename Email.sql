@@ -1,0 +1,31 @@
+CREATE TABLE USER
+  (
+	UserID NUMBER PRIMARY KEY,
+	UserName VARCHAR2(100 Bytes),
+	FirstName VARCHAR2(100 Bytes),
+	LastName VARCHAR2(100 Bytes)
+  ) NOLOGGING;
+
+CREATE TABLE MAIL
+  (
+	MessageID NUMBER PRIMARY KEY,
+	Subject VARCHAR2(4000 Bytes),
+	Body VARCHAR2(4000 Bytes),
+	Date DATE	
+  ) NOLOGGING;
+
+CREATE MAIL_FOLDER
+  (
+	MailfolderID NUMBER PRIMARY KEY,
+	Mailfolder varchar2(200)
+  ) NOLOGGING;
+  
+CREATE MAIL_SYSTEM
+  (
+	UserID NUMBER,
+	MessageID NUMBER,
+	MailfolderID NUMBER,
+	View NUMBER(1)
+   );
+	
+	
